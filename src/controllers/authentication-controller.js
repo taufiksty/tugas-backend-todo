@@ -9,8 +9,9 @@ const UserValidator = require('../validators/user');
 
 const deleteSignOutAuthenticationHandler = asyncWrapper(async (req, res) => {
 	const userId = req.auth.id;
+	const accessToken = req.header('Authorization').split(' ')[1];
 
-	await signOut(userId);
+	await signOut(userId, accessToken);
 
 	res.json({
 		success: true,

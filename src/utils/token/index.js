@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken');
 const config = require('../../config');
 const AuthenticationError = require('../../errors/authentication-error');
 
+const TokenBlacklist = new Set();
+
 const TokenManager = {
 	generateAccessToken: (payload) => {
 		return jwt.sign(payload, config.jwt.accessToken, { expiresIn: 11800 });
@@ -27,4 +29,4 @@ const TokenManager = {
 	},
 };
 
-module.exports = TokenManager;
+module.exports = { TokenBlacklist, TokenManager };

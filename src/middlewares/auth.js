@@ -1,11 +1,18 @@
 const AuthenticationError = require('../errors/authentication-error');
-const TokenManager = require('../utils/token');
+const { TokenManager, TokenBlacklist } = require('../utils/token');
 
 const auth = (req, res, next) => {
 	const token = req.header('Authorization').split(' ')[1];
+
 	if (!token) {
 		throw new AuthenticationError(
 			"You didn't have token. Please set to your Authorization header.",
+		);
+	}
+
+	if (TokenBlacklist.has(token)) {
+		throw new AuthenticationError(
+			'Your token is unvalid. Please sign-in first.',
 		);
 	}
 

@@ -10,7 +10,7 @@ const {
 const InvariantError = require('../errors/invariant-error');
 const AuthenticationError = require('../errors/authentication-error');
 
-const TokenManager = require('../utils/token');
+const { TokenManager, TokenBlacklist } = require('../utils/token');
 
 const signIn = async ({ username, password }) => {
 	const checkUsernameIsExist = await findByUsername(username);
@@ -36,7 +36,9 @@ const signIn = async ({ username, password }) => {
 	return { accessToken, refreshToken };
 };
 
-const signOut = async (userId) => {
+const signOut = async (userId, token) => {
+	TokenBlacklist.add(token);
+
 	return await destroyToken(userId);
 };
 
