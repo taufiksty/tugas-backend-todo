@@ -1,0 +1,27 @@
+{
+	"name": "tugas-backend-todo",
+	"version": "1.0.0",
+	"description": "Technical Project Assignment (TPA) #5 - Web Service & RESTful API for ToDoList Application",
+	"author": "Muhamad Taufik Satya",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon ./src/server.js"
+	},
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"joi": "^17.11.0",
+		"jsonwebtoken": "^9.0.2",
+		"moment-timezone": "^0.5.43",
+		"mysql2": "^3.6.2",
+		"nanoid": "^3.1.20",
+		"nodemon": "^3.0.1"
+	},
+	"devDependencies": {
+		"morgan": "^1.10.0",
+		"sequelize": "^6.33.0",
+		"sequelize-cli": "^6.6.1"
+	}
+}
