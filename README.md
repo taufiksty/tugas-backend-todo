@@ -227,4 +227,4 @@ Content-Type: application/json
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/taufiksty/tugas_backend_todo/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/taufiksty/tugas-backend-todo/blob/main/LICENSE) file for details.
