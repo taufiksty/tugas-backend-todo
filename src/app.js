@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
 	res.send(
-		'Welcome to Todo List API. Please read the documentation on https://github.com/taufiksty/tugas-backend-todo.',
+		'Welcome to Todo List API. Please read the <a href="https://github.com/taufiksty/tugas-backend-todo">documentation</a>.',
 	);
 });
 
