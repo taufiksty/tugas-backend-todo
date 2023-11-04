@@ -12,6 +12,12 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+	res.send(
+		'Welcome to Todo List API. Please read the documentation on https://github.com/taufiksty/tugas-backend-todo.',
+	);
+});
+
 app.use('/api/auth', authRouter);
 app.use('/api/todos', todoRouter);
 
