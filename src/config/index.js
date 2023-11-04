@@ -6,6 +6,8 @@ module.exports = {
 	app: {
 		env: process.env.NODE_ENV,
 		port: process.env.PORT,
+		hostDev: process.env.HOST_DEV,
+		hostProd: process.env.HOST_PROD,
 		baseUrl: process.env.BASE_URL,
 	},
 	jwt: {

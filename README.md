@@ -46,7 +46,8 @@ This is the documentation for the Todo List API, which allows you to manage and 
         # APP
         NODE_ENV=development
         PORT=3000
-        BASE_URL=http://localhost:3000
+        HOST_DEV=localhost
+        HOST_PROD=0.0.0.0
 
         # DATABASE DEV
         DB_DEV_USERNAME=root
